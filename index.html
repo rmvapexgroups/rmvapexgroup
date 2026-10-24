@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMV APEX GROUP ™ | Master Tools Hub - Emerald Sapphire Edition</title>
+    
+    <!-- === GLOBAL OPENGRAPH & TWITTER CARD PROTOCOL === -->
+    <meta name="theme-color" content="#0F172A">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="🔥 RMV APEX GROUP Master Tools Hub | Free Instant Access">
+    <meta property="og:description" content="One place for RMV APEX GROUP tools, enterprise services, digital ecosystem, and tool directory.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0F172A/38BDF8?text=GitLab+Master+Enterprise+Hub%0A%0ABy+RMV+APEX+GROUP+%E2%84%A2&font=Montserrat">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- === GLOBAL DUAL-TELEMETRY (GOOGLE ANALYTICS 4) === -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M0D5RV7EFT"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFT0NRT70J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-M0D5RV7EFT'); 
+      gtag('config', 'G-LFT0NRT70J'); 
+    </script>
+
+    <script type="application/json" id="neural-array-registration">{"name":"GitLab Master Enterprise Hub","path":"index.html","icon":"👑"}</script>
+
+    <!-- Base Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root { 
+            --primary: #38BDF8; 
+            --bg-main: #0F172A; /* Deep Midnight Sapphire Blue */
+            --surface: #1E293B; /* Slate Dark Glass Cards */
+            --text-light: #F8FAFC; 
+            --text-muted: #94A3B8; 
+            --z-critical: 9999; 
+            --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.4); 
+            --shadow-hover: 0 30px 60px rgba(56, 189, 248, 0.2); 
+        }
+
+        * { box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-main); color: var(--text-light); margin: 0; padding: 0; overflow-x: hidden; scroll-behavior: smooth; background-image: radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.15) 0%, transparent 40%), radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.15) 0%, transparent 40%); }
+        
+        .card-panel { background: var(--surface); border: 2px solid rgba(56, 189, 248, 0.2); border-radius: 24px; box-shadow: var(--shadow-card); transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+        .card-panel:hover { border-color: var(--primary); box-shadow: var(--shadow-hover); }
+        
+        ::-webkit-scrollbar { width: 10px; height: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg-main); }
+        ::-webkit-scrollbar-thumb { background: #38BDF8; border-radius: 5px; border: 2px solid var(--bg-main); }
+
+        .btn-glow { transition: all 0.3s ease; }
+        .btn-glow:hover { box-shadow: 0 0 30px rgba(56, 189, 248, 0.5); transform: translateY(-2px); }
+        .apex-input { width: 100%; padding: 1rem 1.25rem; border-radius: 1rem; background: #0F172A; border: 2px solid #334155; color: #FFF; font-size: 1rem; font-weight: 600; transition: all 0.2s; }
+        .apex-input:focus { outline: none; border-color: var(--primary); background: #1E293B; box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.3); }
+        
+        .floating-widget-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
+        .float-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; color: white; cursor: pointer; border: 3px solid #38BDF8; box-shadow: 0 10px 25px rgba(0,0,0,0.4); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+        .float-btn:hover { transform: scale(1.1) rotate(5deg); box-shadow: 0 15px 35px rgba(56, 189, 248, 0.5); }
+        .btn-wa { background: #25D366; } 
+        .btn-support { background: linear-gradient(135deg, #F43F5E 0%, #BE123C 100%); }
+
+        /* Modals */
+        .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); display: none; justify-content: center; align-items: center; z-index: var(--z-critical); }
+        .modal-overlay.active { display: flex !important; animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        #toast-container { position: fixed; top: 30px; right: 30px; z-index: 10005; display: flex; flex-direction: column; gap: 12px; pointer-events: none; }
+        .toast { background: #1E293B; color: #38BDF8; font-weight: 900; padding: 1.25rem 2rem; border-radius: 16px; border: 2px solid #38BDF8; display: flex; align-items: center; gap: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); max-width: 400px; pointer-events: auto; animation: slideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        
+        .view-content { display: none; animation: fadeUp 0.4s ease; }
+        .view-content.active { display: block !important; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .clock-matrix { background: #0F172A; color: #38BDF8; padding: 0.75rem 1.5rem; border-radius: 12px; font-weight: 900; font-family: 'Inter', sans-serif; font-size: 0.9rem; border: 2px solid #334155; box-shadow: 4px 4px 0px #38BDF8; }
+        #agency-editor-panel { position: fixed; top: 20px; right: 20px; width: 400px; background: #1E293B; border: 4px solid #38BDF8; border-radius: 24px; padding: 30px; z-index: 99999; box-shadow: 10px 10px 0px rgba(56,189,248,0.3); display: none; color: #FFF; }
+
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        
+        /* Nav button states */
+        .nav-btn { width: 100%; text-align: left; padding: 1rem 1.25rem; border-radius: 1rem; font-weight: 800; display: flex; align-items: center; gap: 1rem; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; color: #94A3B8; background: transparent; border: 2px solid transparent; }
+        .nav-btn:hover { background: #1E293B; color: #38BDF8; border-color: rgba(56,189,248,0.3); transform: translateX(5px); }
+        .nav-btn.active { background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%); color: #0F172A; border-color: #38BDF8; box-shadow: 0 10px 25px rgba(56,189,248,0.4); transform: translateX(10px); font-weight: 900; }
+
+        .symbol-card { position: relative; overflow: hidden; background: #1E293B; border-radius: 24px; padding: 2rem; border-bottom: 8px solid; border-left: 2px solid rgba(56,189,248,0.2); border-right: 2px solid rgba(56,189,248,0.2); border-top: 2px solid rgba(56,189,248,0.2); transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: var(--shadow-card); }
+        .symbol-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: var(--shadow-hover); border-color: var(--primary); }
+        .symbol-bg { position: absolute; top: -10px; right: -10px; font-size: 8rem; opacity: 0.03; transform: rotate(15deg); pointer-events: none; }
+
+
+        /* === RMV APEX GROUP: RESPONSIVE / MOBILE HARDENING === */
+        html { width: 100%; max-width: 100%; scroll-padding-top: 1rem; -webkit-text-size-adjust: 100%; }
+        body { width: 100%; min-width: 0; max-width: 100%; }
+        img, svg, video, canvas, iframe { max-width: 100%; }
+        button, input, select, textarea { font: inherit; }
+        button, a, input, select, textarea { touch-action: manipulation; }
+        a, button { overflow-wrap: anywhere; }
+        pre, code { max-width: 100%; overflow-x: auto; }
+        .card-panel, .symbol-card, .modal-overlay > *, main, aside, section { min-width: 0; }
+        .modal-overlay { padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; }
+        .modal-overlay > .card-panel { max-width: 100%; max-height: min(92dvh, 900px); overflow-y: auto; overscroll-behavior: contain; }
+        .pricing-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+        #toast-container { width: min(400px, calc(100vw - 24px)); right: 12px; top: max(12px, env(safe-area-inset-top)); }
+        .toast { max-width: 100%; overflow-wrap: anywhere; }
+        #agency-editor-panel { width: min(400px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); overflow-y: auto; }
+        .floating-widget-container { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); gap: 10px; }
+        .float-btn { width: 52px; height: 52px; font-size: 1.4rem; }
+        .nav-btn { min-height: 48px; transform: none !important; }
+        .nav-btn:hover, .nav-btn.active { transform: none !important; }
+        .clock-matrix { max-width: 100%; overflow-wrap: anywhere; }
+
+        @media (max-width: 767px) {
+            body { font-size: 15px; }
+            body > .bg-gradient-to-r { padding: 8px 0; }
+            body > .bg-gradient-to-r marquee { font-size: 10px; letter-spacing: .08em; }
+            nav.card-panel { position: sticky; top: 0; margin: 8px 8px 0; padding: 12px; gap: 12px; border-radius: 16px; z-index: 100; }
+            nav.card-panel > div:first-child { gap: 10px; min-width: 0; }
+            nav.card-panel > div:first-child .text-4xl { font-size: 1.8rem; }
+            nav.card-panel h1 { font-size: clamp(1rem, 4.4vw, 1.35rem); line-height: 1.15; overflow-wrap: anywhere; }
+            nav.card-panel p { overflow-wrap: anywhere; }
+            nav.card-panel > div { min-width: 0; }
+            nav.card-panel button, nav.card-panel a { min-height: 44px; }
+            .flex.flex-1.flex-col.md\:flex-row { padding: 10px; gap: 14px; }
+            aside.w-full.md\:w-80 { position: static; width: 100%; }
+            aside { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+            .nav-btn { padding: 10px; gap: 8px; border-radius: 12px; font-size: .78rem; line-height: 1.25; }
+            .nav-btn i { width: 22px !important; font-size: 1rem; flex: 0 0 auto; }
+            main { width: 100%; overflow: visible; }
+            main > div { width: 100%; max-width: 100%; }
+            main section { max-width: 100%; }
+            .card-panel { border-radius: 16px; }
+            .symbol-card { padding: 1.15rem; border-radius: 16px; }
+            .pricing-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+            .modal-overlay { align-items: flex-start; }
+            .modal-overlay > .card-panel { width: 100%; margin: 0; padding: 18px; border-radius: 18px; max-height: calc(100dvh - 24px); }
+            .modal-overlay h2 { max-width: 100%; overflow-wrap: anywhere; }
+            .modal-overlay button, .modal-overlay a { min-height: 44px; }
+            .apex-input { padding: 12px 14px; font-size: 16px; }
+            .clock-matrix { font-size: .78rem; padding: .6rem .75rem; box-shadow: 2px 2px 0 #38BDF8; }
+            #agency-editor-panel { top: 12px; right: 12px; padding: 16px; border-width: 2px; border-radius: 16px; }
+            #toast-container { gap: 8px; }
+            .toast { padding: 12px 14px; border-radius: 12px; font-size: .85rem; }
+            .max-w-6xl, .max-w-7xl, .max-w-5xl, .max-w-4xl, .max-w-3xl { max-width: 100%; }
+            .overflow-x-auto { -webkit-overflow-scrolling: touch; }
+        }
+
+        @media (max-width: 420px) {
+            aside { grid-template-columns: minmax(0, 1fr); }
+            .nav-btn { font-size: .88rem; padding: 11px 12px; }
+            nav.card-panel { margin-left: 6px; margin-right: 6px; padding: 10px; }
+            .flex.flex-1.flex-col.md\:flex-row { padding: 8px; }
+            .modal-overlay > .card-panel { padding: 15px; }
+            .float-btn { width: 46px; height: 46px; font-size: 1.2rem; border-width: 2px; }
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            .btn-glow:hover, .symbol-card:hover, .card-panel:hover { transform: none; }
+            .nav-btn:hover { background: transparent; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+        }
+
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Guru ji's Blessings Marquee -->
+    <div class="bg-gradient-to-r from-sky-600 via-blue-900 to-emerald-600 text-white py-2.5 border-b-4 border-sky-400 shadow-lg relative z-50">
+        <marquee scrollamount="6" class="font-black text-sm uppercase tracking-widest flex items-center">
+            🌟 GURU JI'S BLESSINGS: MAY YOUR ENTERPRISE SCALE INFINITELY, YOUR CODE DEPLOY FLAWLESSLY, AND YOUR DIGITAL WEALTH COMPOUND ETERNALLY ACROSS THE 99M MATRIX! 🚩 OM SHRI GANESHAYA NAMAH! 🙏
+        </marquee>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <nav class="card-panel px-6 py-4 flex justify-between items-center sticky top-0 z-40 flex-wrap gap-4 mx-4 mt-4 border-2 border-sky-500/40">
+        <div class="flex items-center gap-4">
+            <span class="text-4xl filter drop-shadow-md">💎</span>
+            <div>
+                <h1 class="text-xl md:text-2xl font-black tracking-wider uppercase text-white leading-none">RMV APEX GROUP ™</h1>
+                <p class="text-[11px] text-sky-400 font-mono tracking-widest font-black uppercase mt-1">Master Tools Hub (Sapphire Edition)</p>
+            </div>
+        </div>
+
+        <!-- Live World Geo Time Matrix -->
+        <div class="clock-matrix" id="liveClock">🌍 Initiating Matrix...</div>
+
+        <div class="flex items-center gap-3">
+            <button onclick="RMV_App.triggerLead('Custom Enterprise Architecture Suite')" class="bg-gradient-to-r from-sky-400 to-blue-600 text-gray-950 font-black py-3 px-6 rounded-xl shadow-lg hover:shadow-2xl text-sm flex items-center gap-2 uppercase cursor-pointer transition transform hover:-translate-y-1 border-2 border-sky-300">
+                <i class="fa-solid fa-paper-plane text-xl"></i> Request Custom SaaS
+            </button>
+            <button onclick="RMV_App.showModal('pricingModal')" class="bg-slate-900 border-2 border-sky-400 text-sky-400 font-black py-3 px-6 rounded-xl btn-glow text-sm flex items-center gap-2 cursor-pointer transition transform hover:-translate-y-1">
+                <i class="fa-solid fa-gem text-lg text-emerald-400"></i> 15-Tier Price Matrix
+            </button>
+        </div>
+    </nav>
+
+    <!-- App Layout Container -->
+    <div class="flex flex-1 flex-col md:flex-row p-4 gap-6">
+        <!-- Sidebar Navigation -->
+        <aside class="w-full md:w-80 shrink-0 h-fit sticky top-28 flex flex-col gap-3">
+            <button id="btn-dossier" onclick="RMV_App.switchTab('view-dossier')" class="nav-btn active"><i class="fa-solid fa-building-shield text-xl w-8 text-center text-sky-400"></i> Corporate Dossier</button>
+            <button id="btn-fractal" onclick="RMV_App.switchTab('view-fractal')" class="nav-btn"><i class="fa-solid fa-cubes text-xl w-8 text-center text-purple-400"></i> 99M Fractal Matrix</button>
+            <button id="btn-ecosystem" onclick="RMV_App.switchTab('view-ecosystem')" class="nav-btn"><i class="fa-solid fa-globe text-xl w-8 text-center text-emerald-400"></i> Digital Ecosystem</button>
+            <button onclick="RMV_App.showModal('pricingModal')" class="nav-btn"><i class="fa-solid fa-tags text-xl w-8 text-center text-rose-400"></i> Pricing Matrix</button>
+            <button onclick="RMV_App.showModal('supportModal')" class="nav-btn"><i class="fa-solid fa-heart text-xl w-8 text-center text-rose-500"></i> Support Creator</button>
+            
+            <!-- GITLAB INDEXER AUTOMATION BUTTON -->
+            <button onclick="RMV_App.showModal('indexerModal')" class="w-full text-left px-5 py-4 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 text-gray-950 font-black flex items-center gap-3 text-sm cursor-pointer mt-6 shadow-xl hover:shadow-2xl transition transform hover:scale-105 border-4 border-slate-900"><i class="fa-solid fa-code-branch text-2xl drop-shadow-md"></i> GitLab Auto-Indexer</button>
+            
+            <div class="mt-8 pt-6 border-t-2 border-slate-800 text-xs text-slate-400 font-bold text-center">
+                <span class="text-emerald-400 bg-emerald-950 px-3 py-1 rounded-full border border-emerald-600 shadow-sm"><i class="fa-solid fa-bolt text-yellow-400"></i> PRO ACTIVE</span><br><br>
+                Press <kbd class="bg-slate-900 text-sky-400 px-2 py-1 rounded-lg text-[10px] border-b-2 border-slate-700 shadow-sm">Ctrl+Shift+L</kbd> for Editor
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="flex-1 overflow-y-auto pb-20">
+            <div class="max-w-6xl mx-auto">
+                
+                <!-- VIEW 1: MASTER CORPORATE DOSSIER -->
+                <section id="view-dossier" class="view-content active">
+                    <div class="mb-8 px-2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest bg-sky-500 text-slate-950 shadow-md border-2 border-sky-300"><i class="fa-solid fa-shield-halved"></i> Official Record</span>
+                            <span class="text-sm text-slate-300 font-black uppercase bg-slate-900 px-4 py-1.5 rounded-full shadow-sm border border-slate-700">Class-A Protocol</span>
+                        </div>
+                        <h2 class="text-5xl md:text-6xl font-black tracking-tighter text-white mt-2 drop-shadow-sm uppercase">RMV APEX GROUP ™</h2>
+                        <p class="text-3xl font-black text-sky-400 mt-3 drop-shadow-sm">Ramesh Mewalal Vishwakarma <span class="text-red-500">🚩</span></p>
+                        <p class="text-lg text-slate-300 font-bold mt-1 bg-slate-900 inline-block px-4 py-1 rounded-lg shadow-sm border border-slate-700"><i class="fa-solid fa-crown text-amber-400"></i> Chairman & Principal Architect</p>
+                    </div>
+
+                    <!-- Dossier Summary Card -->
+                    <div class="card-panel p-8 md:p-10 mb-8 border-l-8 border-l-sky-400 cursor-pointer hover:border-l-emerald-400 transition group relative overflow-hidden" onclick="RMV_App.triggerLead('Corporate Ecosystem Retainer')">
+                        <div class="absolute top-0 right-0 p-8 opacity-5 text-9xl group-hover:scale-110 transition duration-500 pointer-events-none">🏢</div>
+                        <h3 class="font-black text-white text-3xl mb-4 flex items-center gap-3 relative z-10"><i class="fa-solid fa-scroll text-sky-400 group-hover:text-emerald-400 transition text-4xl drop-shadow-md"></i> Master Corporate Dossier</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-8 font-medium relative z-10">
+                            Commanding an integrated corporate ecosystem spanning digital automation, capital markets, real estate finance, taxation compliance, and global trade. RMV APEX GROUP ™ engineers high-performance enterprise systems and absolute regulatory frameworks to empower sustainable macroeconomic growth worldwide.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm relative z-10">
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-700 shadow-sm hover:border-sky-400 transition">🚀 <strong class="text-white text-base block mb-1">Marketing</strong> Brand Intelligence</div>
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-700 shadow-sm hover:border-sky-400 transition">💰 <strong class="text-white text-base block mb-1">Capital Markets</strong> Global Wealth</div>
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-700 shadow-sm hover:border-sky-400 transition">🤖 <strong class="text-white text-base block mb-1">Digital Economy</strong> AI & Auto</div>
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-700 shadow-sm hover:border-sky-400 transition">⚖️ <strong class="text-white text-base block mb-1">Compliance</strong> Tax & Gov</div>
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-700 shadow-sm hover:border-sky-400 transition">🏠 <strong class="text-white text-base block mb-1">Real Estate</strong> Asset Portfolios</div>
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-700 shadow-sm hover:border-sky-400 transition">📊 <strong class="text-white text-base block mb-1">Integrity</strong> Audit Systems</div>
+                        </div>
+                    </div>
+
+                    <!-- Headquarters & Operations -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div class="card-panel p-8 cursor-pointer hover:border-sky-400 transition group" onclick="RMV_App.triggerLead('Global Headquarters Consultation')">
+                            <h3 class="font-black text-white text-xl uppercase tracking-wider mb-4 flex items-center gap-3"><i class="fa-solid fa-location-dot text-red-500 text-3xl drop-shadow-sm group-hover:animate-bounce"></i> Global Headquarters</h3>
+                            <p class="text-slate-300 text-sm md:text-base leading-relaxed font-bold bg-slate-900 p-5 rounded-xl border border-slate-700 shadow-inner">
+                                <strong class="text-white text-lg uppercase tracking-wide block mb-2">RMV APEX GROUP ™</strong>
+                                Shop No. 01, Kenny House, Plot No. 79,<br>
+                                Lady Fatima Road, Opposite Mayfair Green,<br>
+                                Poisar, Kandivali West, Mumbai - 400067,<br>Maharashtra, India.
+                            </p>
+                        </div>
+                        <div class="card-panel p-8 group">
+                            <h3 class="font-black text-white text-xl uppercase tracking-wider mb-4 flex items-center gap-3"><i class="fa-solid fa-headset text-sky-400 text-3xl drop-shadow-sm group-hover:scale-110 transition"></i> Executive Comms</h3>
+                            <div class="space-y-3 bg-slate-900 p-5 rounded-xl border border-slate-700 shadow-inner font-bold">
+                                <p class="flex items-center gap-3"><span class="w-10 h-10 bg-green-950 text-green-400 flex items-center justify-center rounded-lg text-xl shadow-sm"><i class="fa-brands fa-whatsapp"></i></span> <a href="https://wa.me/918652025006" target="_blank" class="text-white hover:text-green-400 transition text-base">+91 8652025006</a></p>
+                                <p class="flex items-center gap-3"><span class="w-10 h-10 bg-blue-950 text-blue-400 flex items-center justify-center rounded-lg text-xl shadow-sm"><i class="fa-solid fa-envelope"></i></span> <a href="mailto:rmvapexgroup@gmail.com" class="text-white hover:text-blue-400 transition text-base truncate">rmvapexgroup@gmail.com</a></p>
+                                <p class="flex items-center gap-3"><span class="w-10 h-10 bg-purple-950 text-purple-400 flex items-center justify-center rounded-lg text-xl shadow-sm"><i class="fa-solid fa-id-card"></i></span> <a href="https://ramesh27952.wcard.me" target="_blank" class="text-white hover:text-purple-400 transition text-base">Founder Identity Card</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repository Tools Master Directory -->
+                    <div class="card-panel border-4 border-emerald-400 p-8 md:p-10 shadow-2xl relative mb-8 overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500 rounded-full blur-[80px] opacity-20 -mr-20 -mt-20 pointer-events-none"></div>
+                        <div class="flex justify-between items-center mb-8 relative z-10 flex-wrap gap-4">
+                            <h3 class="text-2xl font-black text-white uppercase tracking-wider flex items-center gap-4"><i class="fa-solid fa-folder-tree text-emerald-400 text-4xl drop-shadow-md"></i> Master Tools Hub</h3>
+                            <button onclick="RMV_App.showModal('indexerModal')" class="bg-emerald-500 text-slate-950 border-2 border-emerald-400 px-6 py-3 rounded-xl text-sm font-black hover:bg-emerald-400 transition shadow-xl cursor-pointer flex items-center gap-2 uppercase tracking-wide transform hover:scale-105"><i class="fa-solid fa-plus text-lg"></i> Append New Tool</button>
+                        </div>
+                        <p class="relative z-10 text-slate-300 font-semibold mb-5">All available sections in one place. Use search to find a section or a tool you have added. The current live website is not changed by downloading this file.</p>
+                        <div class="relative z-10 mb-7">
+                            <h4 class="text-white text-xl md:text-2xl font-black mb-2">RMV APEX GROUP — Master Tools Hub</h4>
+                            <p class="text-slate-300 mb-5">Ek homepage, sabhi tools ki searchable directory.</p>
+                            <div id="masterToolCategories" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+                                <a href="#masterToolQuickLinks" data-hub-search="public tools free public-access tools" class="hub-tool-card block rounded-2xl border-2 border-sky-500/40 bg-slate-950 p-5 hover:border-sky-400 transition">
+                                    <span class="text-3xl">🌍</span><h4 class="font-black text-white text-lg mt-3">Public Tools</h4><p class="text-sm text-slate-400 mt-2">Free, public-access tools.</p><span class="inline-block mt-4 text-sky-300 font-bold text-sm">Browse public tools →</span>
+                                </a>
+                                <button type="button" onclick="RMV_App.showModal('pricingModal')" data-hub-search="premium tools premium features plans pricing" class="hub-tool-card text-left rounded-2xl border-2 border-rose-500/40 bg-slate-950 p-5 hover:border-rose-400 transition">
+                                    <span class="text-3xl">💎</span><h4 class="font-black text-white text-lg mt-3">Premium Tools</h4><p class="text-sm text-slate-400 mt-2">Premium features and plans.</p><span class="inline-block mt-4 text-rose-300 font-bold text-sm">View plans →</span>
+                                </button>
+                                <a href="#masterToolDirectory" data-hub-search="offline pwa standalone tools offline progressive web app" class="hub-tool-card block rounded-2xl border-2 border-purple-500/40 bg-slate-950 p-5 hover:border-purple-400 transition">
+                                    <span class="text-3xl">📱</span><h4 class="font-black text-white text-lg mt-3">Offline / PWA</h4><p class="text-sm text-slate-400 mt-2">Standalone tools.</p><span class="inline-block mt-4 text-purple-300 font-bold text-sm">View directory →</span>
+                                </a>
+                                <a href="#masterToolDirectory" data-hub-search="new tools expandable directory add update tool" class="hub-tool-card block rounded-2xl border-2 border-emerald-500/40 bg-slate-950 p-5 hover:border-emerald-400 transition">
+                                    <span class="text-3xl">➕</span><h4 class="font-black text-white text-lg mt-3">New Tools</h4><p class="text-sm text-slate-400 mt-2">Expandable directory for newly added tools.</p><span class="inline-block mt-4 text-emerald-300 font-bold text-sm">Explore directory →</span>
+                                </a>
+                            </div>
+                        </div>
+                        <label for="masterToolSearch" class="sr-only">Search tools</label>
+                        <input id="masterToolSearch" type="search" placeholder="Search tools and sections…" oninput="RMV_App.filterMasterTools(this.value)" class="relative z-10 w-full mb-5 rounded-xl border-2 border-slate-700 bg-slate-950 text-white px-5 py-4 outline-none focus:border-emerald-400" aria-label="Search tools and sections">
+                        <div id="masterToolQuickLinks" class="relative z-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 mb-6">
+                            <a href="#" onclick="RMV_App.switchTab('view-dossier'); return false;" data-hub-search="corporate dossier public tools company contact" class="hub-tool-card block rounded-2xl border-2 border-sky-500/40 bg-slate-950 p-5 hover:border-sky-400 transition"><span class="text-3xl">🏢</span><h4 class="font-black text-white text-lg mt-3">Corporate Dossier & Directory</h4><p class="text-sm text-slate-400 mt-2">Main hub, business information, and tool directory.</p><span class="inline-block mt-4 text-sky-300 font-bold text-sm">Open section →</span></a>
+                            <a href="#" onclick="RMV_App.switchTab('view-fractal'); return false;" data-hub-search="fractal matrix algorithm cluster premium generator" class="hub-tool-card block rounded-2xl border-2 border-purple-500/40 bg-slate-950 p-5 hover:border-purple-400 transition"><span class="text-3xl">🧩</span><h4 class="font-black text-white text-lg mt-3">99M Fractal Matrix</h4><p class="text-sm text-slate-400 mt-2">Open the interactive matrix and cluster synthesizer.</p><span class="inline-block mt-4 text-purple-300 font-bold text-sm">Open section →</span></a>
+                            <a href="#" onclick="RMV_App.switchTab('view-ecosystem'); return false;" data-hub-search="digital ecosystem public tools links resources" class="hub-tool-card block rounded-2xl border-2 border-emerald-500/40 bg-slate-950 p-5 hover:border-emerald-400 transition"><span class="text-3xl">🌐</span><h4 class="font-black text-white text-lg mt-3">Digital Ecosystem</h4><p class="text-sm text-slate-400 mt-2">Browse the ecosystem tools and resources.</p><span class="inline-block mt-4 text-emerald-300 font-bold text-sm">Open section →</span></a>
+                            <button type="button" onclick="RMV_App.showModal('pricingModal')" data-hub-search="premium pricing 15 tier price matrix saas" class="hub-tool-card text-left rounded-2xl border-2 border-rose-500/40 bg-slate-950 p-5 hover:border-rose-400 transition"><span class="text-3xl">💎</span><h4 class="font-black text-white text-lg mt-3">Premium Pricing Matrix</h4><p class="text-sm text-slate-400 mt-2">View the available service and pricing tiers.</p><span class="inline-block mt-4 text-rose-300 font-bold text-sm">Open pricing →</span></button>
+                            <button type="button" onclick="RMV_App.showModal('indexerModal')" data-hub-search="add new tool indexer update index html download" class="hub-tool-card text-left rounded-2xl border-2 border-amber-500/40 bg-slate-950 p-5 hover:border-amber-400 transition"><span class="text-3xl">➕</span><h4 class="font-black text-white text-lg mt-3">Add / Update a Tool</h4><p class="text-sm text-slate-400 mt-2">Generate an updated index.html by providing the current file and new tool details.</p><span class="inline-block mt-4 text-amber-300 font-bold text-sm">Open tool updater →</span></button>
+                            <button type="button" onclick="RMV_App.showModal('supportModal')" data-hub-search="support contact help creator" class="hub-tool-card text-left rounded-2xl border-2 border-pink-500/40 bg-slate-950 p-5 hover:border-pink-400 transition"><span class="text-3xl">❤️</span><h4 class="font-black text-white text-lg mt-3">Support & Contact</h4><p class="text-sm text-slate-400 mt-2">Open support and creator contribution options.</p><span class="inline-block mt-4 text-pink-300 font-bold text-sm">Open support →</span></button>
+                        </div>
+                        <div id="masterToolDirectory" class="space-y-4 relative z-10">
+                            <!-- Injected tools will appear here dynamically via the Indexer -->
+                            <div class="p-8 bg-slate-900 border-2 border-dashed border-emerald-500/40 rounded-2xl text-base text-slate-400 font-bold text-center shadow-sm">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-3xl text-emerald-400 mb-3 block"></i>
+                                Use the GitLab Auto-Indexer (Emerald Button) to inject new Micro-SaaS tools directly into this operational hub.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 2: 99M FRACTAL MATRIX ENGINE -->
+                <section id="view-fractal" class="view-content">
+                    <div class="flex justify-between items-center mb-8 flex-wrap gap-4 px-2">
+                        <div>
+                            <h2 class="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase drop-shadow-sm">99M Fractal Matrix <i class="fa-solid fa-cubes text-purple-400"></i></h2>
+                            <p class="text-base text-slate-300 font-bold mt-2 bg-slate-900 inline-block px-4 py-1.5 rounded-lg border border-slate-700 shadow-sm">Autonomous algorithmic cluster synthesizer. Click any node to deploy.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="RMV_App.synthesizeMatrix()" class="bg-gradient-to-r from-sky-400 to-blue-600 text-slate-950 font-black px-6 py-3.5 rounded-xl text-sm hover:brightness-110 transition shadow-xl cursor-pointer flex items-center gap-2 uppercase tracking-wide border-2 border-sky-300 transform hover:scale-105">
+                                <i class="fa-solid fa-rotate text-lg"></i> Refresh Clusters
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="fractalClusterGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pb-12"></div>
+                </section>
+
+                <!-- VIEW 3: OMNI DIGITAL ECOSYSTEM -->
+                <section id="view-ecosystem" class="view-content">
+                    <div class="mb-8 px-2">
+                        <h2 class="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase drop-shadow-sm">Omni Digital Ecosystem <i class="fa-solid fa-globe text-emerald-400"></i></h2>
+                        <p class="text-base text-slate-300 font-bold mt-2 bg-slate-900 inline-block px-4 py-1.5 rounded-lg border border-slate-700 shadow-sm">Click any sovereign node below to initiate secure connection protocols.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 pb-12" id="ecosystemGrid"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- ====================================================================== -->
+    <!-- 15-TIER PRICING MATRIX MODAL WITH DYNAMIC GEO-CURRENCY                 -->
+    <!-- ====================================================================== -->
+    <div id="pricingModal" class="modal-overlay">
+        <div class="card-panel p-8 md:p-12 max-w-7xl w-full mx-4 max-h-[90vh] overflow-y-auto relative border-t-8 border-t-sky-400 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+            <button onclick="RMV_App.hideModal('pricingModal')" class="absolute top-6 right-6 text-slate-400 hover:text-red-500 hover:rotate-90 transition duration-300 text-4xl font-black cursor-pointer bg-slate-900 w-12 h-12 flex items-center justify-center rounded-full shadow-inner">×</button>
+            
+            <div class="text-center mb-10">
+                <span class="text-sm font-black text-sky-400 uppercase tracking-widest bg-sky-950 px-4 py-1.5 rounded-full border border-sky-800 shadow-sm inline-block mb-4"><i class="fa-solid fa-tags"></i> Commercial Catalog</span>
+                <h2 class="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter drop-shadow-sm">15-TIER GLOBAL MATRIX</h2>
+                <div class="inline-flex items-center gap-3 bg-slate-900 text-white px-5 py-2.5 rounded-xl shadow-md border-2 border-slate-700">
+                    <i class="fa-solid fa-earth-americas text-sky-400 text-xl animate-pulse"></i>
+                    <p class="text-sm font-bold tracking-wide" id="geoPricingContext">Detecting Geo-Location Currency...</p>
+                </div>
+            </div>
+            
+            <div class="pricing-grid mb-8" id="priceTierGrid"></div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT / PAYMENT GATEWAY MODAL -->
+    <div id="checkoutModal" class="modal-overlay">
+        <div class="card-panel p-8 md:p-10 max-w-lg w-full mx-4 text-center relative border-t-8 border-t-emerald-400 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+            <button onclick="RMV_App.hideModal('checkoutModal')" class="absolute top-4 right-4 text-slate-400 hover:text-red-500 hover:rotate-90 transition duration-300 text-3xl font-black cursor-pointer w-10 h-10 bg-slate-900 flex items-center justify-center rounded-full">×</button>
+            
+            <div class="w-24 h-24 bg-emerald-950 text-emerald-400 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 shadow-inner border-4 border-slate-800"><i class="fa-solid fa-shield-check"></i></div>
+            
+            <h2 class="text-3xl font-black text-white mb-2 uppercase tracking-wider drop-shadow-sm">Secure Checkout</h2>
+            <p class="text-sm text-sky-300 font-bold mb-8 bg-slate-900 py-2 px-4 rounded-lg inline-block border border-slate-700" id="checkoutTargetItem">Loading Target...</p>
+            
+            <div class="bg-slate-900 rounded-2xl p-6 border-2 border-slate-700 mb-6 shadow-md hover:border-sky-400 transition">
+                <p class="text-sky-400 font-black text-xs uppercase tracking-widest mb-4 bg-slate-950 inline-block px-3 py-1 rounded-full"><i class="fa-solid fa-mobile-screen"></i> Option 1: Instant UPI / GPay</p>
+                <a id="gpayLink" href="#" class="bg-white text-gray-950 font-black py-4 px-6 rounded-xl text-lg w-full flex items-center justify-center gap-3 mb-3 hover:bg-slate-200 transition shadow-lg transform hover:-translate-y-1">
+                    <i class="fa-brands fa-google-pay text-3xl text-red-500 bg-white p-1 rounded"></i> Pay Now via GPay
+                </a>
+                <p class="text-xs text-sky-300 font-mono font-bold bg-slate-950 py-1.5 px-3 rounded inline-block border border-slate-800">UPI ID: rmvgroupsworld@oksbi</p>
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-6 border-2 border-slate-700 text-left mb-8 shadow-md hover:border-sky-400 transition">
+                <p class="text-sky-400 font-black text-xs uppercase tracking-widest mb-4 text-center bg-slate-950 inline-block px-3 py-1 rounded-full w-full"><i class="fa-solid fa-building-columns"></i> Option 2: Bank Transfer</p>
+                <div class="text-sm text-slate-300 leading-relaxed bg-slate-950 p-5 rounded-xl border border-slate-800 font-semibold space-y-2">
+                    <p class="flex justify-between border-b border-slate-800 pb-1"><span>Bank:</span> <strong class="text-white">State Bank of India (SBI)</strong></p>
+                    <p class="flex justify-between border-b border-slate-800 pb-1"><span>Account:</span> <strong class="text-emerald-400 select-all text-lg font-black">10153494535</strong></p>
+                    <p class="flex justify-between border-b border-slate-800 pb-1"><span>IFSC:</span> <strong class="text-white select-all">SBIN0000551</strong></p>
+                    <p class="flex justify-between"><span>Name:</span> <strong class="text-white truncate max-w-[150px]">Ramesh Mewalal Vishwakarma</strong></p>
+                </div>
+            </div>
+
+            <button id="whatsappConfirmBtn" class="bg-[#25D366] text-white font-black w-full py-5 rounded-2xl hover:brightness-110 transition shadow-[0_10px_25px_rgba(37,211,102,0.4)] text-base uppercase tracking-wider flex items-center justify-center gap-3 cursor-pointer transform hover:scale-[1.02] border-4 border-slate-800">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> Send Receipt on WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- SUPPORT CREATOR / DONATION VAULT MODAL -->
+    <div id="supportModal" class="modal-overlay">
+        <div class="card-panel p-8 md:p-10 max-w-md w-full mx-4 text-center relative border-t-8 border-t-rose-500 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+            <button onclick="RMV_App.hideModal('supportModal')" class="absolute top-4 right-4 text-slate-400 hover:text-red-500 hover:rotate-90 transition duration-300 text-3xl font-black cursor-pointer w-10 h-10 bg-slate-900 flex items-center justify-center rounded-full">×</button>
+            <div class="w-24 h-24 bg-gradient-to-br from-rose-950 to-rose-900 text-rose-400 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 shadow-inner border-4 border-slate-800 animate-pulse"><i class="fa-solid fa-heart"></i></div>
+            <h2 class="text-3xl font-black text-white mb-3 uppercase tracking-tighter drop-shadow-sm">Support Creator Vault</h2>
+            <p class="text-slate-300 text-sm font-bold mb-8 bg-slate-900 p-4 rounded-xl border border-slate-700 shadow-sm">If this 100% free enterprise architecture delivered value, please consider supporting future development!</p>
+            
+            <div class="flex flex-col gap-4 mb-8 text-sm font-black">
+                <a href="https://ko-fi.com/rameshmewalalvishwakarma" target="_blank" class="py-4 px-6 rounded-2xl text-white bg-[#29abe0] hover:brightness-110 flex items-center justify-center gap-3 shadow-lg transform hover:-translate-y-1 transition text-lg"><i class="fa-solid fa-mug-hot text-2xl"></i> Support on Ko-Fi</a>
+                <a href="https://buymeacoffee.com/rameshmewalalvishwakarma" target="_blank" class="py-4 px-6 rounded-2xl text-black bg-[#FFD700] hover:brightness-110 flex items-center justify-center gap-3 shadow-lg transform hover:-translate-y-1 transition text-lg border-2 border-[#FFD700]"><i class="fa-solid fa-pizza-slice text-2xl"></i> Buy Me a Coffee</a>
+                <a href="tez://upi/pay?pa=rmvgroupsworld@oksbi&pn=Ramesh%20Mewalal%20Vishwakarma&cu=INR" class="py-4 px-6 rounded-2xl text-white bg-slate-900 border-2 border-sky-400 hover:bg-slate-800 flex items-center justify-center gap-3 shadow-lg transform hover:-translate-y-1 transition text-lg"><i class="fa-brands fa-google-pay text-3xl text-red-500"></i> Tip via GPay / UPI</a>
+            </div>
+
+            <div class="bg-slate-900 p-5 rounded-2xl border-2 border-slate-700 text-left text-sm leading-relaxed text-slate-300 mb-8 font-semibold shadow-inner">
+                <p class="text-white font-black mb-3 uppercase tracking-widest text-center border-b-2 border-slate-800 pb-2"><i class="fa-solid fa-building-columns text-rose-400"></i> SBI Direct Transfer</p>
+                <p class="mt-2 text-center flex flex-col gap-1">
+                    <span>Acct: <strong class="text-emerald-400 select-all font-black text-lg bg-slate-950 px-2 py-0.5 rounded border border-slate-800 shadow-sm">10153494535</strong></span>
+                    <span>IFSC: <strong class="text-white select-all font-black bg-slate-950 px-2 py-0.5 rounded border border-slate-800 shadow-sm">SBIN0000551</strong></span>
+                </p>
+            </div>
+
+            <button onclick="RMV_App.triggerSupportWhatsApp()" class="bg-[#25D366] text-white font-black w-full py-4 rounded-2xl hover:brightness-110 transition shadow-[0_10px_25px_rgba(37,211,102,0.4)] text-sm uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transform hover:scale-[1.02] border-4 border-slate-800">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> Confirm Support on WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- ====================================================================== -->
+    <!-- GITLAB REPOSITORY INDEXER AUTOMATION MODAL                             -->
+    <!-- ====================================================================== -->
+    <div id="indexerModal" class="modal-overlay">
+        <div class="card-panel p-8 md:p-12 max-w-xl w-full mx-4 relative border-t-8 border-t-emerald-400 shadow-[0_20px_70px_rgba(16,185,129,0.3)]">
+            <button onclick="RMV_App.hideModal('indexerModal')" class="absolute top-4 right-4 text-slate-400 hover:text-red-500 hover:rotate-90 transition duration-300 text-3xl font-black cursor-pointer w-10 h-10 bg-slate-900 flex items-center justify-center rounded-full">×</button>
+            <h2 class="text-3xl font-black text-white mb-3 uppercase tracking-tighter flex items-center gap-3 drop-shadow-sm"><i class="fa-solid fa-code-branch text-emerald-400 text-4xl"></i> GitLab Repo Indexer</h2>
+            <p class="text-slate-300 text-sm font-semibold mb-8 bg-slate-900 p-4 rounded-xl border border-slate-700">Automatically generate an updated <code class="bg-slate-950 px-2 py-0.5 rounded shadow-sm text-emerald-400 font-bold">index.html</code> file to upload to your GitLab website whenever you create a new tool.</p>
+            
+            <div class="bg-slate-900 rounded-2xl p-6 border-2 border-slate-700 mb-6 shadow-sm hover:border-emerald-400 transition">
+                <label class="block text-xs font-black text-white mb-3 uppercase tracking-widest"><i class="fa-solid fa-upload text-emerald-400"></i> 1. Upload Existing GitLab index.html <span class="text-slate-400">(Optional)</span></label>
+                <input type="file" id="oldIndexFile" accept=".html" class="w-full text-sm font-bold file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-black file:bg-emerald-950 file:text-emerald-400 hover:file:bg-emerald-900 cursor-pointer text-slate-300">
+                <p class="text-[11px] text-slate-400 font-mono font-bold mt-3">If uploaded, the new tool will be seamlessly injected into your current directory instead of starting fresh.</p>
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-6 border-2 border-slate-700 mb-8 shadow-sm hover:border-emerald-400 transition">
+                <label class="block text-xs font-black text-white mb-4 uppercase tracking-widest"><i class="fa-solid fa-pen-to-square text-emerald-400"></i> 2. New Tool Details</label>
+                <input type="text" id="newToolName" class="apex-input mb-4 text-base font-bold bg-slate-950 shadow-inner" placeholder="New Tool Name (e.g. SEO Meta Generator)">
+                <input type="text" id="newToolLink" class="apex-input text-base font-bold bg-slate-950 font-mono shadow-inner text-sky-400" placeholder="File Path (e.g. seo-meta-gen.html)">
+            </div>
+            
+            <button onclick="RMV_App.generateMasterIndex()" class="bg-gradient-to-r from-emerald-400 to-teal-600 text-slate-950 font-black w-full py-5 rounded-2xl hover:brightness-110 transition shadow-[0_10px_25px_rgba(16,185,129,0.4)] text-base uppercase tracking-wider cursor-pointer flex items-center justify-center gap-3 transform hover:scale-[1.02] border-4 border-slate-800">
+                <i class="fa-solid fa-cloud-arrow-up text-2xl"></i> Generate Updated index.html
+            </button>
+        </div>
+    </div>
+
+    <!-- VOLUNTARY GOOGLE FORMS LEAD CAPTURE MODAL -->
+    <div id="leadModal" class="modal-overlay">
+        <div class="card-panel p-8 md:p-10 max-w-lg w-full mx-4 relative border-t-8 border-t-sky-400 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+            <button onclick="RMV_App.hideModal('leadModal')" class="absolute top-4 right-4 text-slate-400 hover:text-red-500 hover:rotate-90 transition duration-300 text-3xl font-black cursor-pointer w-10 h-10 bg-slate-900 flex items-center justify-center rounded-full">×</button>
+            <h2 class="text-3xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-sm flex items-center gap-3"><i class="fa-solid fa-paper-plane text-sky-400 text-4xl"></i> Enterprise Inquiry</h2>
+            <p class="text-slate-300 text-sm font-semibold mb-8 bg-slate-900 p-4 rounded-xl border border-slate-700">Submit your requirements directly to the RMV APEX engineering advisory desk.</p>
+            
+            <div class="space-y-4">
+                <textarea id="leadReq" class="apex-input h-32 text-sm font-bold bg-slate-950 shadow-inner resize-none border-2" placeholder="Describe your exact software requirement..."></textarea>
+                <input type="text" id="leadName" class="apex-input text-sm font-bold bg-slate-950 shadow-inner border-2" placeholder="Full Legal Name">
+                <input type="email" id="leadEmail" class="apex-input text-sm font-bold bg-slate-950 shadow-inner border-2" placeholder="Verified Business Email ✉️">
+                <input type="text" id="leadAddress" class="apex-input text-sm font-bold bg-slate-950 shadow-inner border-2" placeholder="Full Address / City">
+                <input type="tel" id="leadPhone" class="apex-input text-sm font-bold bg-slate-950 shadow-inner border-2" placeholder="WhatsApp Number (with Country Code)">
+            </div>
+            
+            <button onclick="RMV_App.submitLeadForm()" class="bg-gradient-to-r from-sky-400 to-blue-600 text-slate-950 font-black w-full py-5 rounded-2xl hover:brightness-110 transition shadow-xl text-base uppercase tracking-wider cursor-pointer flex items-center justify-center gap-2 mt-8 transform hover:scale-[1.02] border-4 border-slate-800">
+                <i class="fa-solid fa-paper-plane text-xl"></i> Submit Inquiry (Free)
+            </button>
+        </div>
+    </div>
+
+    <!-- SECRET CONFIG PANEL (CTRL + SHIFT + L) -->
+    <div id="agency-editor-panel">
+        <div class="flex justify-between items-center mb-6 border-b-2 border-slate-700 pb-3">
+            <h3 class="text-lg font-black text-white uppercase tracking-wider flex items-center gap-2"><i class="fa-solid fa-sliders text-sky-400"></i> Live Config Editor</h3>
+            <button onclick="document.getElementById('agency-editor-panel').style.display='none'" class="text-slate-400 hover:text-red-500 text-3xl font-black cursor-pointer bg-slate-900 w-8 h-8 flex items-center justify-center rounded-full">×</button>
+        </div>
+        <div class="space-y-4">
+            <div>
+                <label class="block text-[10px] font-black text-slate-400 mb-1 uppercase tracking-widest">Brand Name</label>
+                <input type="text" id="cfgBrandName" class="apex-input text-sm bg-slate-950 font-bold border-2" placeholder="e.g. RMV APEX GROUP ™">
+            </div>
+            <div>
+                <label class="block text-[10px] font-black text-slate-400 mb-1 uppercase tracking-widest">Primary Color Hex</label>
+                <input type="text" id="cfgBrandHex" class="apex-input text-sm bg-slate-950 font-mono font-bold border-2" placeholder="e.g. #38BDF8">
+            </div>
+            <div class="bg-slate-950 p-4 rounded-xl border-2 border-slate-700 border-dashed">
+                <label class="block text-xs font-black text-white mb-2 uppercase">Upload Local Logo:</label>
+                <input type="file" id="cfgLogoFile" class="w-full text-xs font-bold file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-black file:bg-sky-400 file:text-slate-950 hover:file:bg-sky-300 cursor-pointer" accept="image/*">
+            </div>
+        </div>
+        <button onclick="RMV_App.applyLiveConfig()" class="bg-emerald-500 text-slate-950 font-black w-full py-4 rounded-xl text-sm uppercase cursor-pointer hover:bg-emerald-400 shadow-lg mt-6 flex items-center justify-center gap-2 transform hover:-translate-y-1 transition"><i class="fa-solid fa-check-double"></i> Apply & Inject Configuration</button>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <!-- Floating Action Hotlines -->
+    <div class="floating-widget-container">
+        <button onclick="RMV_App.triggerSupportWhatsApp()" class="float-btn btn-wa" title="Direct WhatsApp Hotline"><i class="fa-brands fa-whatsapp"></i></button>
+        <button onclick="RMV_App.showModal('supportModal')" class="float-btn btn-support" title="Support Creator Vault"><i class="fa-solid fa-heart"></i></button>
+    </div>
+
+    <!-- Universal ES5-Compatible JavaScript Engine -->
+    <script>
+        var RMV_App = {
+            clusters: [
+                { limit: 10000000, name: "B2B SaaS & Dashboards", prefixes: ["Enterprise", "Cloud", "Smart", "Omni", "Apex"], types: ["CRM", "Dashboard", "Portal", "PWA", "Tracker"], industries: ["Real Estate", "Medical", "Agency", "Retail", "Logistics"], icon: "🏢", color: "#3B82F6" },
+                { limit: 20000000, name: "Financial Math Engines", prefixes: ["Algorithmic", "Dynamic", "Global", "Automated", "Precision"], types: ["Calculator", "Matrix", "Estimator", "Visualizer", "Amortizer"], industries: ["Crypto", "Banking", "Tax", "Trading", "Wealth"], icon: "💰", color: "#10B981" },
+                { limit: 30000000, name: "Marketing & SEO Funnels", prefixes: ["Viral", "High-Converting", "SEO", "Utm", "Funnel"], types: ["Generator", "Scraper", "Analyzer", "Builder", "Previewer"], industries: ["E-commerce", "SaaS", "Coaching", "Local Biz", "Affiliate"], icon: "🚀", color: "#F59E0B" },
+                { limit: 40000000, name: "Content Factory UIs", prefixes: ["B2B", "AI", "Omnichannel", "Viral", "Automated"], types: ["Scripter", "Thread Builder", "Formatter", "Copy Matrix", "Storyboarder"], industries: ["LinkedIn", "Twitter", "Instagram", "YouTube", "TikTok"], icon: "📝", color: "#8B5CF6" },
+                { limit: 50000000, name: "Developer Code Utilities", prefixes: ["Secure", "Local", "Regex", "Base64", "JSON"], types: ["Minifier", "Validator", "Compressor", "Mock Builder", "Decoder"], industries: ["Frontend", "Backend", "DevOps", "Web3", "SysAdmin"], icon: "⚙️", color: "#06B6D4" },
+                { limit: 60000000, name: "Data File Converters", prefixes: ["1-Click", "Instant", "Batch", "Real-Time", "Dynamic"], types: ["Exporter", "Converter", "Parser", "Dashboard", "Manager"], industries: ["Big Data", "Analytics", "Research", "Academic", "Corporate"], icon: "🔄", color: "#EC4899" },
+                { limit: 70000000, name: "Health & Astrology", prefixes: ["Algorithmic", "Personalized", "Holistic", "Vedic", "Dynamic"], types: ["Planner", "Tracker", "Chart Matrix", "Log", "Optimizer"], industries: ["Fitness", "Dietary", "Spiritual", "Mental Health", "Longevity"], icon: "🌱", color: "#84CC16" },
+                { limit: 80000000, name: "Web3 Crypto Security", prefixes: ["Zero-Trust", "Hardware-level", "Crypto", "Decentralized", "Secure"], types: ["Vault", "Arbitrage Tracker", "Gas Visualizer", "Encoder", "Generator"], industries: ["DeFi", "NFT", "Blockchain", "Cybersec", "Privacy"], icon: "🛡️", color: "#64748B" },
+                { limit: 90000000, name: "EdTech Productivity", prefixes: ["Interactive", "Deep-Focus", "Kanban", "Markdown", "Daily"], types: ["Quiz Engine", "Time Tracker", "Vault", "Outliner", "Whiteboard"], industries: ["Students", "Remote Teams", "Founders", "Creators", "Writers"], icon: "🎓", color: "#F43F5E" },
+                { limit: 99999999, name: "Enterprise Commercial Hub", prefixes: ["White-Label", "15-Tier", "Gamified", "God-Mode", "Blob-Based"], types: ["Config Injector", "Pricing Grid", "Capture UI", "Service Worker", "Dashboard"], industries: ["Agencies", "Consultants", "Resellers", "Franchises", "Monopolies"], icon: "👑", color: "#38BDF8" }
+            ],
+            ecosystem: [
+                { name: "Primary Corporate Website", url: "https://www.rmvapexgroup.blogspot.com", icon: "🌐", color: "#3B82F6" },
+                { name: "Integrated Marketplace", url: "https://www.rmvapexgroupmarketplaces.blogspot.com", icon: "🛒", color: "#F59E0B" },
+                { name: "Founder Digital Card", url: "https://ramesh27952.wcard.me", icon: "📇", color: "#8B5CF6" },
+                { name: "Connect Hub", url: "https://rmvapexgroupmarketplaces.blogspot.com/p/connect.html", icon: "🔗", color: "#10B981" },
+                { name: "Corporate Bio-Link", url: "https://rmvapexgroup.blogspot.com/p/rmv-apex-group-bio-link.html", icon: "📑", color: "#EC4899" },
+                { name: "Marketplace Bio-Link", url: "https://rmvapexgroupmarketplaces.blogspot.com/p/rmv-apex-group-marketplace-bio-link.html", icon: "🏷️", color: "#06B6D4" },
+                { name: "WhatsApp Direct Hotline", url: "https://wa.me/918652025006", icon: "📞", color: "#22C55E" },
+                { name: "WhatsApp Official Channel", url: "https://whatsapp.com/channel/0029Vb77sCJLikg2rvaE9M05", icon: "📢", color: "#16A34A" },
+                { name: "LinkedIn Corporate Page", url: "https://linkedin.com/company/rmvapexgroup", icon: "🏢", color: "#0A66C2" },
+                { name: "X (Twitter) Broadcast", url: "https://x.com/rmvapexgroup", icon: "🐦", color: "#1DA1F2" },
+                { name: "YouTube Official Network", url: "https://youtube.com/@rmvapexgroup", icon: "▶️", color: "#FF0000" }
+            ],
+            tiers: [
+                { id: 1, name: "Basic Utility SaaS Suite — Starter", level: "🟢 Starter", inr: "₹1,499", usd: 19, eur: 17, gbp: 15, aed: 70, color: "#10B981" },
+                { id: 2, name: "Spirituality & Life Wisdom Assets", level: "🔵 Professional", inr: "₹2,499", usd: 30, eur: 28, gbp: 24, aed: 110, color: "#3B82F6" },
+                { id: 3, name: "Health & Well-being Frameworks", level: "🔵 Professional", inr: "₹2,999", usd: 35, eur: 33, gbp: 28, aed: 130, color: "#3B82F6" },
+                { id: 4, name: "Relationship & Family Dynamics", level: "🔵 Professional", inr: "₹2,499", usd: 30, eur: 28, gbp: 24, aed: 110, color: "#3B82F6" },
+                { id: 5, name: "Compliance & Tax Architecture", level: "🔵 Professional", inr: "₹2,499", usd: 30, eur: 28, gbp: 24, aed: 110, color: "#3B82F6" },
+                { id: 6, name: "Finance, Investment & Real Estate Pro", level: "🟣 Enterprise", inr: "₹4,999", usd: 60, eur: 55, gbp: 47, aed: 220, color: "#8B5CF6" },
+                { id: 7, name: "Business, Franchise & Startup Advisory", level: "🟣 Enterprise", inr: "₹4,999", usd: 60, eur: 55, gbp: 47, aed: 220, color: "#8B5CF6" },
+                { id: 8, name: "Digital, SEO & E-commerce Deployments", level: "🟣 Enterprise", inr: "₹7,500", usd: 90, eur: 83, gbp: 70, aed: 330, color: "#8B5CF6" },
+                { id: 9, name: "Advanced Knowledge & Creative Training", level: "🔵 Professional", inr: "₹2,999", usd: 35, eur: 33, gbp: 28, aed: 130, color: "#3B82F6" },
+                { id: 10, name: "Premium Marketplace Subscription", level: "🟢 Sub", inr: "₹999/mo", usd: 15, eur: 14, gbp: 12, aed: 55, color: "#10B981" },
+                { id: 11, name: "Elite Marketplace Lifetime Access", level: "🟣 Lifetime", inr: "₹49,999", usd: 599, eur: 550, gbp: 470, aed: 2200, color: "#8B5CF6" },
+                { id: 12, name: "Proprietary Software, AI & Licensing", level: "🟣 Enterprise", inr: "₹4,999+", usd: 60, eur: 55, gbp: 47, aed: 220, color: "#8B5CF6" },
+                { id: 13, name: "Custom Web Application Architecture", level: "🟣 Enterprise", inr: "₹75,000+", usd: 900, eur: 825, gbp: 705, aed: 3300, color: "#8B5CF6" },
+                { id: 14, name: "Supreme Enterprise Custom Solutions", level: "👑 Supreme", inr: "₹5,00,000+", usd: 6000, eur: 5500, gbp: 4700, aed: 22000, color: "#38BDF8" },
+                { id: 15, name: "Elite Infrastructure Maintenance", level: "🔵 Retainer", inr: "₹15,000/mo", usd: 180, eur: 165, gbp: 140, aed: 660, color: "#3B82F6" }
+            ],
+            generatedMatrixData: [],
+            userCountryData: { country: "IN", currency: "INR", symbol: "₹", locationString: "India" }, // Default to India
+
+            init: function() {
+                this.resolveGeoTimeAndCurrency();
+                this.synthesizeMatrix();
+                this.renderEcosystem();
+                this.setupNeuromarketing();
+                this.bindShortcuts();
+            },
+
+            // ======================================================================
+            // WORLD TIME MATRIX & GEO-CURRENCY RESOLVER
+            // ======================================================================
+            resolveGeoTimeAndCurrency: function() {
+                var self = this;
+                fetch('https://ipapi.co/json/')
+                    .then(function(res) { return res.json(); })
+                    .then(function(data) {
+                        if(data && data.country_code && data.currency) {
+                            self.userCountryData.country = data.country_code;
+                            self.userCountryData.currency = data.currency;
+                            self.userCountryData.locationString = data.city + ", " + data.country_name;
+                            
+                            // Map symbols
+                            var sym = "₹";
+                            if(data.currency === "USD") sym = "$";
+                            else if(data.currency === "EUR") sym = "€";
+                            else if(data.currency === "GBP") sym = "£";
+                            else if(data.currency === "AED") sym = "AED ";
+                            else sym = data.currency + " ";
+                            
+                            self.userCountryData.symbol = sym;
+                            
+                            var ctx = document.getElementById('geoPricingContext');
+                            if(ctx) ctx.innerText = "Detected Location: " + self.userCountryData.locationString + " (" + data.currency + "). Prices adjusted contextually.";
+                        }
+                        self.startWorldClock();
+                        self.renderPricingMatrix();
+                    })
+                    .catch(function(err) {
+                        console.warn("Geo lookup failed, defaulting to IST/INR.");
+                        self.startWorldClock();
+                        self.renderPricingMatrix();
+                    });
+            },
+
+            startWorldClock: function() {
+                var clockEl = document.getElementById('liveClock');
+                var self = this;
+                function tick() {
+                    if(!clockEl) return;
+                    var now = new Date();
+                    var str = "";
+                    try {
+                        var options = { 
+                            weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', 
+                            hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true,
+                            timeZoneName: 'short'
+                        };
+                        str = new Intl.DateTimeFormat('default', options).format(now);
+                    } catch(e) {
+                        str = now.toLocaleString();
+                    }
+                    var loc = self.userCountryData.locationString || "Local Time";
+                    clockEl.innerHTML = "🌍 " + loc + " | " + str;
+                    requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            },
+
+            showModal: function(id) { 
+                var el = document.getElementById(id);
+                if(el) el.classList.add('active'); 
+            },
+            hideModal: function(id) { 
+                var el = document.getElementById(id);
+                if(el) el.classList.remove('active'); 
+            },
+            showToast: function(msg, type) {
+                var container = document.getElementById('toast-container');
+                if(!container) return;
+                var toast = document.createElement('div');
+                toast.className = 'toast';
+                if(type === 'danger') toast.style.color = '#FF1744';
+                toast.innerHTML = '<i class="fa-solid fa-circle-check text-2xl"></i> <span>' + msg + '</span>';
+                container.appendChild(toast);
+                setTimeout(function() { toast.remove(); }, 4000);
+            },
+
+            switchTab: function(tabId) {
+                var tabs = ['view-dossier', 'view-fractal', 'view-ecosystem'];
+                for(var i = 0; i < tabs.length; i++) {
+                    var el = document.getElementById(tabs[i]);
+                    if(el) el.classList.remove('active');
+                }
+                var target = document.getElementById(tabId);
+                if(target) target.classList.add('active');
+
+                var btnMap = { 'view-dossier': 'btn-dossier', 'view-fractal': 'btn-fractal', 'view-ecosystem': 'btn-ecosystem' };
+                for(var k in btnMap) {
+                    var btn = document.getElementById(btnMap[k]);
+                    if(btn) {
+                        btn.className = (k === tabId) 
+                            ? "nav-btn active"
+                            : "nav-btn";
+                    }
+                }
+            },
+
+            setupNeuromarketing: function() {
+                var self = this;
+                var idleTimer = setTimeout(function() { self.showToast('Need a custom Enterprise App? Click Request Custom SaaS.'); }, 45000);
+                document.addEventListener('mousemove', function() {
+                    clearTimeout(idleTimer);
+                    idleTimer = setTimeout(function() { self.showToast('Still browsing? Let our Principal Architect build your custom solution!'); }, 60000);
+                });
+                document.addEventListener('mouseleave', function(e) {
+                    if(e.clientY <= 0 && !sessionStorage.getItem('rmv_exit_shown')) {
+                        sessionStorage.setItem('rmv_exit_shown', 'true');
+                        self.showModal('supportModal'); 
+                    }
+                });
+            },
+
+            triggerLead: function(itemName) {
+                this.showToast('Connecting: ' + itemName + '...');
+                var reqBox = document.getElementById('leadReq');
+                if(reqBox) {
+                    reqBox.value = "Hello RMV APEX GROUP ™,\n\nI am requesting immediate deployment, architecture consultation, and tier pricing for:\n\n👉 [ " + itemName + " ]\n\nPlease initialize the onboarding pipeline.";
+                }
+                this.showModal('leadModal');
+            },
+
+            initiateCheckout: function(id, name, displayAmt) {
+                this.hideModal('pricingModal');
+                var targetEl = document.getElementById('checkoutTargetItem');
+                if(targetEl) targetEl.innerText = "Processing Payment for: Tier " + id + " - " + name + " (" + displayAmt + ")";
+                
+                var gpayUrl = "tez://upi/pay?pa=rmvgroupsworld@oksbi&pn=Ramesh%20Mewalal%20Vishwakarma&cu=INR";
+                var gpayEl = document.getElementById('gpayLink');
+                if(gpayEl) gpayEl.href = gpayUrl;
+
+                var waBtn = document.getElementById('whatsappConfirmBtn');
+                var self = this;
+                if(waBtn) {
+                    waBtn.onclick = function() {
+                        var msg = encodeURIComponent("Hello RMV APEX GROUP ™,\nI have made the payment for Tier " + id + ": " + name + " (" + displayAmt + ").\nHere is my receipt screenshot:");
+                        window.open("https://wa.me/918652025006?text=" + msg, "_blank");
+                        self.hideModal('checkoutModal');
+                    };
+                }
+                this.showModal('checkoutModal');
+            },
+
+            triggerSupportWhatsApp: function() {
+                var msg = encodeURIComponent("Hello RMV APEX GROUP ™,\nI would like to support your enterprise work and have made a contribution. Here is my receipt screenshot:");
+                window.open("https://wa.me/918652025006?text=" + msg, "_blank");
+                this.showToast('Thank you for your support!');
+            },
+
+            submitLeadForm: function() {
+                var req = document.getElementById('leadReq').value.trim();
+                var name = document.getElementById('leadName').value.trim();
+                var email = document.getElementById('leadEmail').value.trim();
+                var address = document.getElementById('leadAddress').value.trim();
+                var phone = document.getElementById('leadPhone').value.trim();
+
+                if(!req || !name || !email || !phone) {
+                    this.showToast('Please fill in required fields.', 'danger');
+                    return;
+                }
+
+                try {
+                    var formData = new FormData();
+                    formData.append('entry.111111111', name);
+                    formData.append('entry.222222222', email);
+                    formData.append('entry.333333333', address);
+                    formData.append('entry.444444444', phone);
+                    formData.append('entry.555555555', req);
+
+                    fetch('https://docs.google.com/forms/d/e/1FAIpQLSdR8Iwixr6IaUb3cT65jLUtQD2waKh-PKD0rKABgbYZEG7Lwg/formResponse', {
+                        method: 'POST', mode: 'no-cors', body: formData
+                    });
+                } catch(e) {}
+
+                this.showToast('Inquiry recorded! Architect notified.');
+                this.hideModal('leadModal');
+            },
+
+            synthesizeMatrix: function() {
+                var container = document.getElementById('fractalClusterGrid');
+                if(!container) return;
+                container.innerHTML = '';
+                this.generatedMatrixData = [];
+
+                for(var i = 1; i <= 24; i++) {
+                    var mappedIndex = i * 4166666;
+                    var c = this.clusters[i % this.clusters.length];
+                    var prefix = c.prefixes[i % c.prefixes.length];
+                    var type = c.types[(i * 3) % c.types.length];
+                    var ind = c.industries[(i * 7) % c.industries.length];
+                    var clusterName = prefix + " " + ind + " " + type;
+
+                    this.generatedMatrixData.push({
+                        id: "NODE-" + mappedIndex,
+                        cluster: c.name,
+                        name: clusterName,
+                        desc: "Algorithmic node active. Deploy this Micro-SaaS architecture to capture market share instantly.",
+                        icon: c.icon,
+                        color: c.color
+                    });
+                }
+
+                var html = '';
+                for(var j = 0; j < this.generatedMatrixData.length; j++) {
+                    var item = this.generatedMatrixData[j];
+                    var cleanName = item.name.replace(/'/g, "");
+                    var clr = item.color;
+                    
+                    html += '<div class="symbol-card group cursor-pointer" style="border-bottom-color: ' + clr + '" onclick="RMV_App.triggerLead(\'' + cleanName + '\')">';
+                    html += '<div class="symbol-bg text-white group-hover:text-[' + clr + ']">' + item.icon + '</div>';
+                    html += '<div class="relative z-10">';
+                    html += '<div class="flex justify-between items-center mb-4">';
+                    html += '<span class="inline-block bg-slate-900 text-sky-400 text-[10px] font-black px-3 py-1 rounded-full shadow-sm border border-slate-700">' + item.id + '</span>';
+                    html += '<span class="text-4xl filter drop-shadow-md group-hover:scale-125 transition transform duration-300">' + item.icon + '</span>';
+                    html += '</div>';
+                    html += '<h4 class="font-black text-xl text-white group-hover:text-[' + clr + '] transition mb-2 leading-tight">' + item.name + '</h4>';
+                    html += '<p class="text-xs text-slate-400 font-bold mb-6 line-clamp-2">' + item.desc + '</p>';
+                    html += '<button class="w-full bg-slate-900 hover:bg-sky-400 hover:text-slate-950 text-sky-400 border-2 border-slate-700 font-black text-xs py-3 px-4 rounded-xl transition uppercase text-center cursor-pointer shadow-sm group-hover:border-sky-400">Initialize Node ➔</button>';
+                    html += '</div></div>';
+                }
+                container.innerHTML = html;
+                this.showToast('99M Matrix Nodes Synthesized!');
+            },
+
+            renderEcosystem: function() {
+                var container = document.getElementById('ecosystemGrid');
+                if(!container) return;
+                var html = '';
+                for(var i = 0; i < this.ecosystem.length; i++) {
+                    var e = this.ecosystem[i];
+                    var cleanName = e.name.replace(/'/g, "");
+                    var clr = e.color;
+                    
+                    html += '<div onclick="RMV_App.triggerLead(\'' + cleanName + '\')" class="symbol-card group cursor-pointer" style="border-bottom-color: ' + clr + '; padding: 1.5rem;">';
+                    html += '<div class="flex items-center gap-4 relative z-10">';
+                    html += '<div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow-inner border border-slate-700 bg-slate-900 group-hover:scale-110 transition duration-300">' + e.icon + '</div>';
+                    html += '<div>';
+                    html += '<h4 class="text-base font-black text-white group-hover:text-[' + clr + '] transition leading-tight mb-1">' + e.name + '</h4>';
+                    html += '<span class="text-[10px] text-slate-400 font-mono font-bold block">' + e.url.replace('https://','') + '</span>';
+                    html += '</div></div></div>';
+                }
+                container.innerHTML = html;
+            },
+
+            renderPricingMatrix: function() {
+                var container = document.getElementById('priceTierGrid');
+                if(!container) return;
+                
+                var curr = this.userCountryData.currency;
+                var sym = this.userCountryData.symbol;
+                
+                var html = '';
+                for(var i = 0; i < this.tiers.length; i++) {
+                    var t = this.tiers[i];
+                    var cleanName = t.name.replace(/'/g, "");
+                    var clr = t.color;
+                    
+                    var displayPrice = t.inr;
+                    if (curr === 'USD') displayPrice = sym + t.usd;
+                    else if (curr === 'EUR') displayPrice = sym + t.eur;
+                    else if (curr === 'GBP') displayPrice = sym + t.gbp;
+                    else if (curr === 'AED') displayPrice = sym + t.aed;
+                    
+                    if(t.inr.includes("+")) displayPrice += "+";
+                    if(t.inr.includes("/mo")) displayPrice += "/mo";
+                    
+                    html += '<div class="card-panel flex flex-col justify-between overflow-hidden group cursor-pointer border-t-8 transition duration-300" style="border-top-color: ' + clr + '" onclick="RMV_App.triggerLead(&apos;' + cleanName + ' (Tier ' + t.id + ')&apos;)">';
+                    html += '<div class="bg-slate-950 p-8 relative border-b border-slate-800">';
+                    html += '<div class="absolute top-0 right-0 bg-slate-900 text-sky-400 border-b border-l border-slate-800 text-[10px] font-black px-4 py-2 rounded-bl-2xl shadow-sm">' + t.level + '</div>';
+                    html += '<h4 class="text-slate-500 font-black text-[10px] tracking-widest uppercase mb-3">Tier ' + t.id + '</h4>';
+                    html += '<h3 class="text-white font-black text-2xl leading-tight mb-4 group-hover:text-[' + clr + '] transition">' + t.name + '</h3>';
+                    html += '<div class="flex items-baseline gap-1"><span class="text-4xl font-black text-sky-400">' + displayPrice + '</span></div>';
+                    html += '</div>';
+                    html += '<div class="p-8 flex-1 bg-slate-900 flex flex-col">';
+                    html += '<ul class="space-y-4 text-sm text-slate-300 font-bold mb-8 flex-1">';
+                    html += '<li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-[' + clr + '] text-lg mt-0.5"></i> <span>Global Access Configuration</span></li>';
+                    html += '<li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-[' + clr + '] text-lg mt-0.5"></i> <span>Universal Matrix Integration</span></li>';
+                    html += '<li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-[' + clr + '] text-lg mt-0.5"></i> <span>Localized Geo-Pricing (' + curr + ')</span></li>';
+                    html += '</ul>';
+                    html += '<button onclick="event.stopPropagation(); RMV_App.initiateCheckout(' + t.id + ', &apos;' + cleanName + '&apos;, &apos;' + displayPrice + '&apos;)" class="w-full bg-gradient-to-r from-sky-400 to-blue-600 hover:brightness-110 text-slate-950 font-black py-4 rounded-xl uppercase tracking-wider text-sm flex items-center justify-center gap-2 shadow-lg transition cursor-pointer transform hover:-translate-y-1">';
+                    html += '<i class="fa-solid fa-bolt text-slate-950"></i> Initialize ' + t.level.replace(/[^A-Za-z]/g, '') + '</button>';
+                    html += '</div></div>';
+                }
+                container.innerHTML = html;
+            },
+
+            filterMasterTools: function(query) {
+                var q = (query || '').toLowerCase().trim();
+                document.querySelectorAll('.hub-tool-card').forEach(function(card) {
+                    var haystack = ((card.innerText || '') + ' ' + (card.getAttribute('data-hub-search') || '')).toLowerCase();
+                    card.style.display = (!q || haystack.indexOf(q) !== -1) ? '' : 'none';
+                });
+                var directory = document.getElementById('masterToolDirectory');
+                if(directory) {
+                    directory.querySelectorAll(':scope > div').forEach(function(card) {
+                        var haystack = (card.innerText || '').toLowerCase();
+                        card.style.display = (!q || haystack.indexOf(q) !== -1) ? '' : 'none';
+                    });
+                }
+            },
+
+            // ======================================================================
+            // THE GITLAB REPOSITORY INDEXER AUTOMATION
+            // ======================================================================
+            generateMasterIndex: function() {
+                var toolName = document.getElementById('newToolName').value.trim();
+                var toolLink = document.getElementById('newToolLink').value.trim();
+                if(!toolName || !toolLink) {
+                    this.showToast('Please provide New Tool Name and Link.', 'danger');
+                    return;
+                }
+                var fileInput = document.getElementById('oldIndexFile');
+                var self = this;
+                
+                var downloadIndex = function(htmlContent) {
+                    var blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+                    var url = URL.createObjectURL(blob);
+                    var a = document.createElement('a');
+                    a.href = url;
+                    a.download = "index.html"; // Ready for GitLab upload
+                    document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+                    self.showToast("Updated index.html generated. Download it and upload it to your hosting project when ready.");
+                    
+                    var dir = document.getElementById('masterToolDirectory');
+                    if(dir) {
+                        if(dir.innerHTML.indexOf("Use the GitLab Auto-Indexer") !== -1) dir.innerHTML = "";
+                        
+                        var cleanName = toolName.replace(/'/g, "");
+                        dir.innerHTML += '<div class="bg-slate-900 p-5 border-2 border-emerald-500/40 rounded-2xl mb-4 flex items-center justify-between shadow-sm hover:border-emerald-400 transition"><div class="flex items-center gap-4"><div class="w-12 h-12 bg-emerald-950 text-emerald-400 rounded-xl flex items-center justify-center text-2xl shadow-inner border border-emerald-800"><i class="fa-solid fa-rocket"></i></div><div><h4 class="font-black text-white text-base">' + cleanName + '</h4><p class="text-[11px] font-mono text-emerald-400 font-bold mt-1">' + toolLink + '</p></div></div><div class="flex gap-3"><button onclick="RMV_App.triggerLead(&apos;' + cleanName + '&apos;)" class="bg-sky-400 text-slate-950 text-xs font-black px-5 py-2.5 rounded-xl shadow-md hover:bg-sky-300 transition cursor-pointer">Deploy</button><a href="' + toolLink + '" target="_blank" class="bg-slate-800 border-2 border-slate-700 text-sky-400 text-xs font-black px-5 py-2.5 rounded-xl hover:border-sky-400 transition cursor-pointer flex items-center gap-2">View Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>';
+                    }
+                    
+                    self.hideModal('indexerModal');
+                };
+
+                var createFreshIndex = function() {
+                    var freshHtml = "<!DOCTYPE html>\n<html lang='en'>\n<head>\n<meta charset='UTF-8'>\n<title>RMV APEX GROUP ™ | GitLab Enterprise Directory</title>\n<style>body{background:#0F172A;color:#F8FAFC;font-family:sans-serif;padding:40px; margin:0;} .container{max-width:800px; margin:0 auto; background:#1E293B; border-radius:24px; padding:40px; box-shadow:0 20px 50px rgba(0,0,0,0.5); border:2px solid rgba(56,189,248,0.3);} h2{color:#38BDF8; font-weight:900; font-size:32px; margin-bottom:5px;} p{color:#94A3B8;font-weight:bold; margin-bottom:30px; border-bottom:2px solid #334155; padding-bottom:20px;} a{color:#F8FAFC;text-decoration:none;display:flex;align-items:center;padding:20px;background:#0F172A;margin-bottom:15px;border-radius:16px;border:2px solid #334155;font-weight:900; font-size:18px; transition:all 0.2s;} a:hover{border-color:#38BDF8;background:#1E293B;transform:translateY(-3px);box-shadow:0 15px 30px rgba(56,189,248,0.2);} .icon{background:#38BDF8; color:#0F172A; border-radius:12px; width:50px; height:50px; display:inline-flex; align-items:center; justify-content:center; margin-right:20px; font-size:24px; font-weight:black;} .url-text{display:block; font-size:12px; color:#38BDF8; font-family:monospace; margin-top:5px; font-weight:bold;}</style>\n</head>\n<body>\n<div class='container'>\n<h2>RMV APEX GROUP ™</h2>\n<p>GitLab Repository Master Directory 🚀</p>\n<div id='tool-list'>\n<!-- NEW_TOOL_INJECTION_POINT -->\n<a href='" + toolLink + "'><span class='icon'>👑</span> <div>" + toolName + "<span class='url-text'>" + toolLink + "</span></div></a>\n</div>\n</div>\n</body>\n</html>";
+                    downloadIndex(freshHtml);
+                };
+
+                if (fileInput.files.length > 0) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        var content = e.target.result;
+                        var injection = "<a href='" + toolLink + "'><span class='icon'>👑</span> <div>" + toolName + "<span class='url-text'>" + toolLink + "</span></div></a>\n";
+                        
+                        if(content.indexOf("<!-- NEW_TOOL_INJECTION_POINT -->") !== -1) {
+                            content = content.replace("<!-- NEW_TOOL_INJECTION_POINT -->", "<!-- NEW_TOOL_INJECTION_POINT -->\n" + injection);
+                        } else if(content.indexOf("</div>\n</div>\n</body>") !== -1) {
+                            content = content.replace("</div>\n</div>\n</body>", injection + "</div>\n</div>\n</body>");
+                        } else {
+                            content += injection;
+                        }
+                        downloadIndex(content);
+                    };
+                    reader.readAsText(fileInput.files[0]);
+                } else {
+                    createFreshIndex();
+                }
+            },
+
+            applyLiveConfig: function() {
+                var name = document.getElementById('cfgBrandName').value.trim();
+                var hex = document.getElementById('cfgBrandHex').value.trim();
+                var file = document.getElementById('cfgLogoFile').files[0];
+                var self = this;
+
+                if(name) {
+                    document.title = name + " | Enterprise Portal";
+                    var h1 = document.querySelector('nav h1');
+                    if(h1) h1.textContent = name;
+                }
+                if(hex) { document.documentElement.style.setProperty('--primary', hex); document.documentElement.style.setProperty('--bg-main', hex); }
+                if(file) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        var icon = document.querySelector('nav .text-4xl');
+                        if(icon) icon.innerHTML = '<img src="' + e.target.result + '" class="w-12 h-12 rounded-lg object-contain inline-block drop-shadow-md border-2 border-sky-400">';
+                        self.showToast("Logo injected successfully!");
+                    };
+                    reader.readAsDataURL(file);
+                }
+                var panel = document.getElementById('agency-editor-panel');
+                if(panel) panel.style.display = 'none';
+                this.showToast("Configuration applied!");
+            }
+        };
+
+        if(document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() { RMV_App.init(); });
+        } else {
+            RMV_App.init();
+        }
+    </script>
+</body>
+</html>
